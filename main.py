@@ -1,5 +1,3 @@
-
-
 def count_power_groups(stations, lines):
     """
     Count how many connected groups of power stations exist.
@@ -28,7 +26,7 @@ def count_power_groups(stations, lines):
             if node in visited:
                 continue
             visited.add(node)
-            for neigh in adj.get(node, ()):  # safe fallback
+            for neigh in adj.get(node, ()):
                 if neigh not in visited:
                     stack.append(neigh)
 
